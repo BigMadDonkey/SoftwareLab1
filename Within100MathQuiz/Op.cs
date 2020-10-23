@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Within100MathQuiz
 {
-    interface Op
+    public interface Op
     {
         public static Op create_Op(int i)
         {
