@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quiz));
             this.Label1 = new System.Windows.Forms.Label();
             this.LabelTimer = new System.Windows.Forms.Label();
             this.LabelTimerDescribe = new System.Windows.Forms.Label();
@@ -56,6 +57,9 @@
             this.Ans4 = new System.Windows.Forms.RichTextBox();
             this.button_pagedown = new System.Windows.Forms.Button();
             this.button_pageup = new System.Windows.Forms.Button();
+            this.LabelPage = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Label1
@@ -167,7 +171,6 @@
             this.LabelLeftNum2.TabIndex = 3;
             this.LabelLeftNum2.Text = "?";
             this.LabelLeftNum2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelLeftNum2.Click += new System.EventHandler(this.LabelLeftNum2_Click);
             // 
             // LabelEqualSign_3
             // 
@@ -252,7 +255,7 @@
             // ButtonStart
             // 
             this.ButtonStart.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonStart.Location = new System.Drawing.Point(433, 252);
+            this.ButtonStart.Location = new System.Drawing.Point(526, 335);
             this.ButtonStart.Name = "ButtonStart";
             this.ButtonStart.Size = new System.Drawing.Size(121, 65);
             this.ButtonStart.TabIndex = 1;
@@ -271,7 +274,7 @@
             this.Ans1.Location = new System.Drawing.Point(296, 75);
             this.Ans1.Name = "Ans1";
             this.Ans1.Size = new System.Drawing.Size(80, 46);
-            this.Ans1.TabIndex = 6;
+            this.Ans1.TabIndex = 2;
             this.Ans1.Text = "";
             // 
             // Ans2
@@ -280,7 +283,7 @@
             this.Ans2.Location = new System.Drawing.Point(296, 144);
             this.Ans2.Name = "Ans2";
             this.Ans2.Size = new System.Drawing.Size(80, 46);
-            this.Ans2.TabIndex = 6;
+            this.Ans2.TabIndex = 3;
             this.Ans2.Text = "";
             // 
             // Ans3
@@ -289,7 +292,7 @@
             this.Ans3.Location = new System.Drawing.Point(296, 212);
             this.Ans3.Name = "Ans3";
             this.Ans3.Size = new System.Drawing.Size(80, 46);
-            this.Ans3.TabIndex = 6;
+            this.Ans3.TabIndex = 4;
             this.Ans3.Text = "";
             // 
             // Ans4
@@ -298,16 +301,16 @@
             this.Ans4.Location = new System.Drawing.Point(296, 277);
             this.Ans4.Name = "Ans4";
             this.Ans4.Size = new System.Drawing.Size(80, 46);
-            this.Ans4.TabIndex = 6;
+            this.Ans4.TabIndex = 5;
             this.Ans4.Text = "";
             // 
             // button_pagedown
             // 
             this.button_pagedown.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_pagedown.Location = new System.Drawing.Point(475, 191);
+            this.button_pagedown.Location = new System.Drawing.Point(143, 358);
             this.button_pagedown.Name = "button_pagedown";
             this.button_pagedown.Size = new System.Drawing.Size(79, 42);
-            this.button_pagedown.TabIndex = 1;
+            this.button_pagedown.TabIndex = 7;
             this.button_pagedown.Text = "下一页";
             this.button_pagedown.UseVisualStyleBackColor = true;
             this.button_pagedown.Click += new System.EventHandler(this.ButtonPageDown_Click);
@@ -315,20 +318,40 @@
             // button_pageup
             // 
             this.button_pageup.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_pageup.Location = new System.Drawing.Point(475, 134);
+            this.button_pageup.Location = new System.Drawing.Point(21, 358);
             this.button_pageup.Name = "button_pageup";
             this.button_pageup.Size = new System.Drawing.Size(79, 42);
-            this.button_pageup.TabIndex = 1;
+            this.button_pageup.TabIndex = 6;
             this.button_pageup.Text = "上一页";
             this.button_pageup.UseVisualStyleBackColor = true;
             this.button_pageup.Click += new System.EventHandler(this.ButtonPageUp_Click);
+            // 
+            // LabelPage
+            // 
+            this.LabelPage.AutoSize = true;
+            this.LabelPage.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelPage.Location = new System.Drawing.Point(288, 361);
+            this.LabelPage.Name = "LabelPage";
+            this.LabelPage.Size = new System.Drawing.Size(0, 31);
+            this.LabelPage.TabIndex = 8;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(398, 97);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(249, 193);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // Quiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(579, 368);
+            this.ClientSize = new System.Drawing.Size(659, 412);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.LabelPage);
             this.Controls.Add(this.button_pageup);
             this.Controls.Add(this.button_pagedown);
             this.Controls.Add(this.Ans4);
@@ -358,7 +381,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Quiz";
-            this.Text = "加减法测验";
+            this.Text = "终极小学生测验";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,6 +417,8 @@
         private System.Windows.Forms.RichTextBox Ans4;
         private System.Windows.Forms.Button button_pagedown;
         private System.Windows.Forms.Button button_pageup;
+        private System.Windows.Forms.Label LabelPage;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -25,22 +25,22 @@ namespace Within100MathQuiz
 
         void generate_Data(out int left, out int right);
 
-        bool check(int left, int right, int ans);
+        (bool,int) check(int left, int right, int ans);
     }
 
     internal class Divide : Op
     {
         private readonly Random _random = new Random();
 
-        public bool check(int left, int right, int ans)
+        public (bool, int) check(int left, int right, int ans)
         {
-            return (left / right == ans);
+            return ((left / right == ans), left / right);
         }
 
         public void generate_Data(out int left, out int right)
         {
-            right = _random.Next(1, 50);
-            left = _random.Next(1, 50) * right;
+            right = _random.Next(1, 20);
+            left = _random.Next(1, 30) * right;
         }
 
         public override string ToString()
@@ -53,15 +53,15 @@ namespace Within100MathQuiz
     {
         private readonly Random _random = new Random();
 
-        public bool check(int left, int right, int ans)
+        public (bool, int) check(int left, int right, int ans)
         {
-            return (left * right == ans);
+            return ((left * right == ans), left * right);
         }
 
         public void generate_Data(out int left, out int right)
         {
-            left = _random.Next(1, 50);
-            right = _random.Next(1, 50);
+            left = _random.Next(1, 30);
+            right = _random.Next(1, 20);
         }
 
         public override string ToString()
@@ -74,9 +74,9 @@ namespace Within100MathQuiz
     {
         private readonly Random _random = new Random();
 
-        public bool check(int left, int right, int ans)
+        public (bool, int) check(int left, int right, int ans)
         {
-            return (left - right == ans);
+            return ((left - right == ans), left - right);
         }
 
         public void generate_Data(out int left, out int right)
@@ -95,9 +95,9 @@ namespace Within100MathQuiz
     {
         private readonly Random _random = new Random();
 
-        public bool check(int left, int right, int ans)
+        public (bool, int) check(int left, int right, int ans)
         {
-            return (left + right == ans);
+            return ((left + right == ans), left + right);
         }
 
         public void generate_Data(out int left, out int right)
