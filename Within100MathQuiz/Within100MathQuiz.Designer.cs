@@ -167,7 +167,6 @@
             this.LabelLeftNum2.TabIndex = 3;
             this.LabelLeftNum2.Text = "?";
             this.LabelLeftNum2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelLeftNum2.Click += new System.EventHandler(this.LabelLeftNum2_Click);
             // 
             // LabelEqualSign_3
             // 

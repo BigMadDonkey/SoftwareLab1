@@ -308,10 +308,6 @@ namespace Within100MathQuiz
             }
         }
 
-        private void LabelLeftNum2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void saveAns()
         {
